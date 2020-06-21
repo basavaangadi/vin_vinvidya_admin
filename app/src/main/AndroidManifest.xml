@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.vinuthana.vinvidyaadmin"
+    android:targetSandboxVersion="1">
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".activities.extraactivities.SplashActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.useractivities.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.dayatoday.DayToDayActivity"
+            android:label="@string/title_activity_day_to_day"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.extraactivities.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.dayatoday.HomeWorkActivity"
+            android:label="@string/title_activity_home_work"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.dayatoday.HomeWorkFeedbackActivity"
+            android:label="@string/title_activity_home_work_feed_back"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.dayatoday.TimeTableActivity"
+            android:label="@string/title_activity_time_table"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.dayatoday.AttendanceActivity"
+            android:label="@string/title_activity_attendance"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.useractivities.ChangePasswordActivity"
+            android:label="@string/title_activity_change_password"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.useractivities.ForgotPasswordActivity"
+            android:label="@string/title_activity_forgot_password"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.useractivities.RegisterActivity"
+            android:label="@string/title_activity_register"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.dayatoday.PeriodWiseAttendanceActivity"
+            android:label="@string/key_Put_Attendance"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.useractivities.ProfileActivity"
+            android:label="@string/title_activity_profile"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.noticeboard.NoticeActivity"
+            android:label="@string/title_activity_notice"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.examsection.ExamScheduleActivity"
+            android:label="@string/title_activity_exam_schedule"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.examsection.ExamSyllabusActivity"
+            android:label="@string/title_activity_exam_syllabus"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.examsection.ExamMarksActivity"
+            android:label="@string/title_activity_exam_marks"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.examsection.ExamSectionActivity"
+            android:label="@string/title_activity_exam_section"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.noticeboard.NoticeBoardActivity"
+            android:label="@string/title_activity_notice_board"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.noticeboard.ParentNoteActivity"
+            android:label="@string/title_activity_parent_note"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.noticeboard.TeacherNoticeActivity"
+            android:label="@string/title_activity_teachers"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.noticeboard.StaffReminderActivity"
+            android:label="@string/title_activity_staff_reminder"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.otheractivities.OthersActivity"
+            android:label="@string/title_activity_others"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.otheractivities.EventsActivity"
+            android:label="@string/title_activity_events"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.otheractivities.AssignmentActivity"
+            android:label="@string/title_activity_events"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.otheractivities.GalleryActivity"
+            android:label="@string/title_activity_gallery"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.otheractivities.SyllabusActivity"
+            android:label="@string/title_activity_syllabus"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.otheractivities.GalleryDetailsActivity"
+            android:label="@string/title_activity_gallery_detailes"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.otheractivities.SubjectSyllabusActivity"
+            android:label="@string/title_activity_subject_syllabus"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".fragments.noticeboardfragment.StudentListActivity"
+            android:label="@string/title_activity_student_list"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".fragments.daytodayfragment.GiveHmWrkFbActivity"
+            android:label="@string/title_activity_give_hm_wrk_fb"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".fragments.daytodayfragment.PutAttendanceActivity"
+            android:label="@string/title_activity_put_attendance"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".fragments.noticeboardfragment.TeacherNoteActivity"
+            android:label="@string/title_activity_teacher_note"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.noticeboard.ReminderActivity"
+            android:label="@string/title_activity_reminder"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.noticeboard.StudentReminderActivity"
+            android:label="@string/title_activity_student_reminder"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".fragments.noticeboardfragment.StaffRmndrActivity"
+            android:label="@string/title_activity_staff_reminder"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".fragments.noticeboardfragment.StudReminderActivity"
+            android:label="@string/title_activity_stud_reminder"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.noticeboard.NoteActivity"
+            android:label="@string/title_activity_note"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.noticeboard.StaffNoteActivity"
+            android:label="@string/title_activity_staff_note"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.noticeboard.StudentNoteActivity"
+            android:label="@string/title_activity_student_note"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".fragments.daytodayfragment.TimeTblActivity"
+            android:label="@string/title_activity_time_tbl"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".fragments.daytodayfragment.StaffTimeTableActivity"
+            android:label="@string/title_activity_staff_time_table"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".activities.examsection.ExamMarksList" />
+        <activity
+            android:name=".fragments.examsectionfragment.SetExamSyllabusActivity"
+            android:label="@string/title_activity_set_exam_schedule"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".fragments.daytodayfragment.HmWkFeedBackActivity"
+            android:label="@string/title_activity_hm_wk_feed_back"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".fragments.daytodayfragment.HmWrkFbByDateActivity"
+            android:label="@string/title_activity_hm_wrk_fb_by_date"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.dayatoday.EditHomeWorkActivity"
+            android:screenOrientation="portrait" />
+        /* anirudh kotidu services */
+        <service
+            android:name=".fcm.FCMPushReceiverService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".fcm.FCMRegistrationIntentService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".fcm.FCMTokenRefreshListenerService"
+            android:exported="false" />
+
+        <activity
+            android:name=".activities.noticeboard.EditNoticeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.noticeboard.EditTeacherNoteActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.noticeboard.EditParentsNoteActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.noticeboard.EditStaffReminderActvity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.noticeboard.EditStudentReminderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.dayatoday.DayReportActivity"
+            android:label="@string/title_activity_day_report"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.examsection.EditExamScduleActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.dayatoday.EditDailyReportActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.examsection.AllSubjectExamMarksActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.examsection.AllSubjectActivityDemo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.examsection.EditExamSyllabusActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.examsection.SetMaxMinMarksActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.otheractivities.GalleryPhotosActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.examsection.MarksListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.examsection.ExamStatusActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.examsection.SetExamSeduleByStatusActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.examsection.SetExamSyllabusByStatusActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.otheractivities.SingleViewImageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.noticeboard.ClassNoticeActivity"
+            android:label="@string/title_activity_class_notice"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.noticeboard.EditClassNoitceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.extraactivities.InactiveMessageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.noticeboard.ParentMessageActivity"
+            android:label="@string/title_activity_parent_message"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.noticeboard.StaffReplyActivity"
+            android:label="@string/title_activity_staff_reply"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.otheractivities.StudentCredentialsActivity"
+            android:label="@string/title_activity_student_credentials"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.extraactivities.UpdateActivity"
+            android:screenOrientation="portrait" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity android:name=".activities.noticeboard.ClassListActivity" />
+        <activity android:name=".activities.extraactivities.UserErrorActivity"></activity>
+    </application>
+
+</manifest>

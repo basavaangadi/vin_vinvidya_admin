@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".activities.noticeboard.ClassListActivity"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            app:cardCornerRadius="2dp"
+            app:cardElevation="2dp"
+            android:padding="15dp"
+            app:cardUseCompatPadding="true"
+            android:background="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/tvSlno"
+                    android:text="Sl.no"
+                    android:gravity="left"
+                    android:layout_marginLeft="05dp"
+                    android:textColor="@color/colorPrimaryDark"/>
+
+                <TextView
+                    android:id="@+id/tvClassNameTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:textSize="16sp"
+                    android:text="Class"
+                    android:gravity="center"
+                    android:textColor="@color/colorPrimaryDark"/>
+                <TextView
+                    android:id="@+id/tvCheck"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="05dp"
+                    android:layout_weight="1"
+                    android:textSize="16sp"
+                    android:text="Select"
+                    android:gravity="right"
+                    android:textColor="@color/colorPrimaryDark"/>
+
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+    <ListView
+        android:id="@+id/lstWriteClassNt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:scrollbars="none"/>
+
+    <Button
+        android:id="@+id/btnSendClassNt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/key_btn_Send_Class_Notice"
+        android:textAllCaps="false"
+        android:background="@drawable/button_shape"
+        android:textColor="@color/white"
+        android:textSize="18dp" />
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

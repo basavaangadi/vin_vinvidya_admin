@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1009797703879",
+    "firebase_url": "https://vinvidya-staff-4d8c3.firebaseio.com",
+    "project_id": "vinvidya-staff-4d8c3",
+    "storage_bucket": "vinvidya-staff-4d8c3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1009797703879:android:1bae29d8d6dbf102",
+        "android_client_info": {
+          "package_name": "com.vinuthana.vinvidyaadmin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1009797703879-4i0bip7h0k8d1p1vvkjo5kveqsra2cdq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDtgbD7Yi-jQXzM3cxdak_LR_2A_Z6RlJc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

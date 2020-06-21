@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.examsection.SetExamSeduleByStatusActivity"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:weightSum="4"
+    android:layout_marginTop="10dp">
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Class : "
+        android:layout_weight="1"
+        android:textSize="@dimen/tviewsize"
+        android:textColor="@color/card_text"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvSetExamScduleThroStatusClass"
+
+        android:textSize="@dimen/tviewsize"
+        android:layout_weight="1"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Subject : "
+        android:layout_weight="1"
+        android:textSize="@dimen/tviewsize"
+        android:textColor="@color/card_text"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:id="@+id/tvSetExamScduleThroStatusSubject"
+        android:textSize="@dimen/tviewsize"
+        android:layout_weight="1"
+        android:textColor="@color/white"/>
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Exam : "
+            android:layout_weight="1"
+            android:textSize="@dimen/tviewsize"
+            android:textColor="@color/card_text"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:textSize="@dimen/tviewsize"
+            android:id="@+id/tvSetExamScduleThroStatusExam"
+            android:layout_weight="1"
+            android:textColor="@color/white"/>
+
+
+    </LinearLayout>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Exam Date"
+        android:id="@+id/edtSetExamScduleThroStatusDate"
+        android:textColorHint="@color/white"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/white"
+        android:textCursorDrawable="@drawable/black_cursor"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Start time"
+            android:id="@+id/edtSetExamScduleThroStatusStartTime"
+            android:textColorHint="@color/white"
+            android:layout_marginTop="10dp"
+            android:editable="false"
+            android:layout_weight="1"
+            android:textCursorDrawable="@drawable/black_cursor"
+            android:textColor="@color/white"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            />
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="End time"
+            android:id="@+id/edtSetExamScduleThroStatusEndTime"
+            android:layout_weight="1"
+            android:editable="false"
+            android:textColor="@color/white"
+            android:textCursorDrawable="@drawable/black_cursor"
+            android:textColorHint="@color/white"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            />
+    </LinearLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+
+        android:id="@+id/btnSetExamScheduleTroughStatus"
+        android:background="@drawable/button_shape"
+        android:text="Set Exam Schedule"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:textSize="@dimen/tviewsize"
+        />
+</LinearLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".activities.noticeboard.StaffReplyActivity"
+    tools:showIn="@layout/activity_staff_reply"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical">
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/tvStaffReplyParentMessage"
+    android:text="@string/key_ParentMessage"
+    android:textColor="@color/white"
+    android:textSize="18dp"
+    android:layout_gravity="center_vertical"
+    android:gravity="center_vertical"
+    android:textAlignment="center"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edtStaffReply"
+        android:hint="@string/key_Staff_Reply"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:layout_margin="10dp"
+        android:minLines="3"
+        android:maxLines="15"
+        android:textCursorDrawable="@drawable/black_cursor"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnStaffReply"
+        android:text="@string/key_ParentMessage"
+        android:background="@drawable/button_shape"
+        android:textColor="@color/white"
+        android:layout_margin="10dp"/>
+</LinearLayout>

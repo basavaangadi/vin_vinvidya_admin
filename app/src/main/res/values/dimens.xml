@@ -1,0 +1,11 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="cardview_margin">5dp</dimen>
+    <dimen name="radius_corner">6dp</dimen>
+    <dimen name="card_view_elevation">2sp</dimen>
+    <dimen name="activity_padding">5dp</dimen>
+    <dimen name="layout_margin">10dp</dimen>
+    <dimen name="activity_padding_px">20px</dimen>
+    <dimen name="tviewsize">18dp</dimen>
+    <dimen name="spacing_smaller">3dp</dimen>
+</resources>

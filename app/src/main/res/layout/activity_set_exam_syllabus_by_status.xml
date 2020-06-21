@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.examsection.SetExamSyllabusByStatusActivity"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="3dp">
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvExamSylbsThroStatusClass"
+
+            android:textSize="@dimen/tviewsize"
+            android:layout_weight="1"
+            android:textColor="@color/white"/>
+
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:id="@+id/tvExamSylbsThroStatusSubject"
+            android:textSize="@dimen/tviewsize"
+            android:layout_weight="1"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="3dp"
+        >
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:textSize="@dimen/tviewsize"
+            android:id="@+id/tvExamSylbsThroStatusExam"
+            android:layout_weight="1"
+            android:textColor="@color/white"/>
+
+
+
+        <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="textStart"
+        android:layout_weight="1"
+        android:id="@+id/tvExamSylbsThroStatusDate"
+        android:textColorHint="@color/white"
+
+        android:textSize="@dimen/tviewsize"
+        android:textColor="@color/white"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+            android:gravity="start" />
+    </LinearLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:id="@+id/tvExamSylbsThroStatusExamTime"
+
+            android:textSize="@dimen/tviewsize"
+            android:textColor="@color/white"
+
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Syllabus : "
+        android:textColor="@color/card_text"
+        android:layout_marginRight="5dp"
+        android:textSize="@dimen/tviewsize"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Syllabus  "
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:cursorVisible="true"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:textCursorDrawable="@drawable/black_cursor"
+        android:id="@+id/edtExamSylbsThroStatusSyllabus"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+
+        android:id="@+id/btnSetExamScheduleTroughStatus"
+        android:background="@drawable/button_shape"
+        android:text="Set Exam Syllabus"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:textSize="@dimen/tviewsize"/>
+
+
+
+
+
+</LinearLayout>

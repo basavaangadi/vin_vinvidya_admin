@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#252f39</color>
+    <color name="colorPrimaryDark">#1d252d</color>
+    <!--<color name="colorPrimaryDark">#161d23</color>-->
+    <color name="colorAccent">#102027</color>
+    <color name="card">#7986cb</color>
+    <color name="btnColor">#29b6f6</color>
+    <color name="tabEvenColor">#FFFFFF</color>
+    <color name="tabOddColor">#d7d7d7</color>
+
+    <color name="btnTxtColor">#FF8C00</color>
+    <color name="white">#ffffff</color>
+    <color name="defaultBtnColor">#039be5</color>
+    <color name="forgotPassword">#039be5</color>
+    <color name="transparent">#00000000</color>
+    <!--<color name="background">#212121</color>-->
+    <!--<color name="card_view">#424242</color>
+    <color name="background">#303030</color>-->
+    <color name="card_view">#505860</color>
+    <color name="btn_text">#cd036ce5</color>
+    <color name="card_text">#FF8C00</color>
+
+    <!--<color name="background">#3a434c</color>-->
+    <color name="background">#2f3c48</color>
+    <color name="red">#FFFF0000</color>
+    <color name="lightgray">#ededed</color>
+
+    <color name="my_spinner_text_color">#ffffff</color>
+    <color name="material_green_500">#4CAF50</color>
+    <color name="material_green_700">#388E3C</color>
+    <color name="material_green_a700">#4CAF50</color>
+</resources>

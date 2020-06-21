@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.examsection.EditExamSyllabusActivity"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:weightSum="4"
+    android:layout_marginTop="20dp"
+    android:layout_marginLeft="5dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:textSize="18dp"
+        android:textColor="@color/card_text"
+        android:layout_weight="1"
+        android:text="Class : "
+
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvEditExamSyllabusClass"
+        android:textSize="18dp"
+        android:textColor="@color/white"
+        android:layout_weight="1"
+
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvExam"
+        android:textSize="18dp"
+        android:text="Exam : "
+        android:textColor="@color/card_text"
+        android:layout_weight="1"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvEditExamSyllabusExam"
+        android:textSize="18dp"
+
+        android:textColor="@color/white"
+        android:layout_weight="1"/>
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Subject : "
+            android:textColor="@color/card_text"
+            android:textSize="18dp"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvEditExamSyllabusSubject"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date : "
+            android:textColor="@color/card_text"
+            android:textSize="18dp"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvEditExamSyllabusDate"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <!--<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Exam Time : "
+            android:textColor="@color/card_text"
+            android:textSize="18dp"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvEditExamSyllabusExamTime"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Exam End : "
+            android:textColor="@color/card_text"
+            android:textSize="18dp"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvEditExamSyllabusExamEnd"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:layout_weight="1"/>
+
+    </LinearLayout>-->
+<EditText
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/edtExmSyllabus"
+    android:layout_marginTop="5dp"
+    android:textColor="@color/white"
+    android:textSize="18dp"
+    android:cursorVisible="true"
+    android:textCursorDrawable="@drawable/black_cursor"/>
+
+<Button
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/btnEditExamSyllabus"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:layout_marginTop="5dp"
+    android:textColor="@color/white"
+    android:text="Edit ExamSyllabus"
+    android:background="@drawable/button_shape"/>
+</LinearLayout>

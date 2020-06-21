@@ -1,0 +1,85 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="MyAlertDialogStyles" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <!-- Used for the buttons -->
+        <item name="colorAccent">#FFC107</item>
+        <!-- Used for the title and text -->
+        <item name="android:textColorPrimary">#FFFFFF</item>
+        <!-- Used for the background -->
+        <item name="android:background">@color/background</item>
+    </style>
+
+    <style name="AppTheme1" parent="@android:style/Widget.Holo.Light.Spinner">
+        <item name="android:spinnerDropDownItemStyle">@style/mySpinnerItemStyle</item>
+    </style>
+
+    <style name="mySpinnerItemStyle" parent="@android:style/Widget.Holo.DropDownItem.Spinner">
+        <item name="android:textColor">@color/my_spinner_text_color</item>
+    </style>
+
+    <style name="MyCheckBox" parent="Theme.AppCompat">
+        <item name="colorControlNormal">#FF8C00</item>
+        <item name="colorControlActivated">#4CAF50</item>
+    </style>
+
+    <!-- Green App Theme -->
+    <style name="AppTheme.Green" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+        <!-- AppCompat Attributes -->
+        <item name="colorPrimary">@color/material_green_500</item>
+        <item name="colorPrimaryDark">@color/material_green_700</item>
+        <item name="colorAccent">@color/material_green_a700</item>
+
+        <!-- AppCompat Control Attributes -->
+        <!-- Other control states (not in this example)
+        <item name="colorButtonNormal">@color/material_green_500</item>
+        <item name="colorControlNormal">@color/material_green_500</item>
+        <item name="colorControlActivated">@color/material_green_500</item>
+        <item name="colorControlHighlight">@color/selector_green_pressed</item>
+        -->
+
+        <!-- AppCompat Dialog Attributes -->
+        <item name="dialogTheme">@style/Widget.AppCompat.CompoundButton.CheckBox</item>
+        <item name="alertDialogTheme">@style/AppTheme.Dialog.Alert.Green</item>
+    </style>
+
+    <!-- Green Dialog Theme -->
+    <style name="AppTheme.Dialog.Green" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorPrimary">@color/material_green_500</item>
+        <item name="colorPrimaryDark">@color/material_green_700</item>
+        <item name="colorAccent">@color/material_green_a700</item>
+    </style>
+
+    <!-- Green Alert Dialog Theme -->
+    <style name="AppTheme.Dialog.Alert.Green" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorPrimary">@color/material_green_500</item>
+        <item name="colorPrimaryDark">@color/material_green_700</item>
+        <item name="colorAccent">@color/material_green_a700</item>
+    </style>
+
+    <style name="CardViewStyle" parent="CardView">
+        <item name="android:layout_margin">@dimen/cardview_margin</item>
+        <item name="android:padding">@dimen/activity_padding</item>
+        <item name="cardCornerRadius">@dimen/radius_corner</item>
+        <item name="cardElevation">@dimen/card_view_elevation</item>
+    </style>
+</resources>

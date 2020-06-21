@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.noticeboard.EditClassNoitceActivity"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:orientation="horizontal">
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:id="@+id/tvClassNoticeClass"
+        android:text="Class"
+        android:textColor="@color/white"
+        android:textSize="18dp"/>
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+
+            android:id="@+id/tvEditClassNoticeSentDate"
+            android:text="noticeSentDate"
+            android:textColor="@color/white"
+            android:textSize="18dp"/>
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+
+        android:id="@+id/tvClassNoticeTitle"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:text="Notice Title"
+        android:textColor="@color/white"
+        android:textSize="18dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edtEditClassNotice"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:text=""
+        android:hint=" Notice here "
+        android:textCursorDrawable="@drawable/black_cursor"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        android:cursorVisible="true"
+
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:orientation="horizontal">
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/edtEditClassNoticeDate"
+            android:layout_weight="1"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:text=""
+            android:hint=" Notice Date "
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:cursorVisible="true"
+            android:textCursorDrawable="@color/white"/>
+
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/edtEditClassNoticeTime"
+            android:layout_weight="1"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:text=""
+            android:hint=" Notice Time "
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:cursorVisible="true"
+            android:textCursorDrawable="@color/white"/>
+    </LinearLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnEditClassNotice"
+        android:text="@string/key_btn_Edit_Class_Notice"
+        android:background="@drawable/button_shape"
+        android:textColor="@color/white"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="10dp"
+        />
+</LinearLayout>

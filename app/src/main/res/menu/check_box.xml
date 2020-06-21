@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menuShowDue"
+        android:checkable="true"
+        android:button="@drawable/custom_checkbox"
+        android:title="@string/action_selectAll"
+        app:actionViewClass="android.widget.CheckBox"
+        app:showAsAction="ifRoom|withText" />
+
+</menu>
