@@ -474,4 +474,6 @@
     <string name="title_activity_parent_message">ParentMessageActivity</string>
     <string name="title_activity_staff_reply">StaffReplyActivity</string>
     <string name="title_activity_student_credentials">StudentCredentialsActivity</string>
+    <string name="title_activity_admission_fess">AdmissionFessActivity</string>
+    <string name="title_activity_admission_fees">AdmissionFeesActivity</string>
 </resources>

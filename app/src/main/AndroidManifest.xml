@@ -2,15 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.vinuthana.vinvidyaadmin"
     android:targetSandboxVersion="1">
-    <uses-sdk
-        android:minSdkVersion="8"
-        android:targetSdkVersion="17" />
 
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -21,6 +19,12 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".activities.otheractivities.ViewFeesCollectedStudWise"></activity>
+        <activity android:name=".activities.otheractivities.ViewFeesCollectedClassWise" />
+        <activity
+            android:name=".activities.otheractivities.AdmissionFeesActivity"
+            android:label="@string/title_activity_admission_fees"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activities.extraactivities.SplashActivity"
             android:label="@string/app_name"
@@ -255,12 +259,12 @@
         <activity
             android:name=".activities.dayatoday.EditHomeWorkActivity"
             android:screenOrientation="portrait" />
-        /* anirudh kotidu services */
+
         <service
             android:name=".fcm.FCMPushReceiverService"
             android:exported="false">
             <intent-filter>
-                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
         </service>
         <service
@@ -366,7 +370,7 @@
             android:required="false" />
 
         <activity android:name=".activities.noticeboard.ClassListActivity" />
-        <activity android:name=".activities.extraactivities.UserErrorActivity"></activity>
+        <activity android:name=".activities.extraactivities.UserErrorActivity" />
     </application>
 
 </manifest>

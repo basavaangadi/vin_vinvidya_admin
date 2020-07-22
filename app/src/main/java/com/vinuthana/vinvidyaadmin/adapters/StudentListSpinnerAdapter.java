@@ -1,6 +1,7 @@
 package com.vinuthana.vinvidyaadmin.adapters;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -41,6 +42,17 @@ public class StudentListSpinnerAdapter extends BaseAdapter {
         }
         return null;
     }
+   /*@Override
+   public Object getItem(int position) {
+       try {
+           JSONObject object=array.getJSONObject(position);
+           return object.getString("StudentId");
+       } catch (Exception e) {
+           e.printStackTrace();
+       }
+       return null;
+   }*/
+
 
     @Override
     public long getItemId(int i) {
@@ -61,6 +73,8 @@ public class StudentListSpinnerAdapter extends BaseAdapter {
         JSONObject jsonObject = new JSONObject();
         try {
             jsonObject = array.getJSONObject(i);
+             String strJsonObject = jsonObject.toString();
+             Log.e("jsonobject = ",strJsonObject);
             String rollNo= jsonObject.getString(context.getString(R.string.key_RollNo));
             String studentName=jsonObject.getString(context.getString(R.string.key_studentname));
             studentName=rollNo+" "+studentName;

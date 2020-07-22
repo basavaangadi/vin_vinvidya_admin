@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 
 import com.vinuthana.vinvidyaadmin.R;
+import com.vinuthana.vinvidyaadmin.activities.otheractivities.AdmissionFeesActivity;
 import com.vinuthana.vinvidyaadmin.activities.otheractivities.AssignmentActivity;
 import com.vinuthana.vinvidyaadmin.activities.otheractivities.EventsActivity;
 import com.vinuthana.vinvidyaadmin.activities.otheractivities.GalleryActivity;
@@ -81,6 +82,9 @@ public class RviewAdapterOthers extends RecyclerView.Adapter<RviewAdapterOthers.
                         break;
                     case 4:
                         intent = new Intent(context, StudentCredentialsActivity.class);
+                        break;
+                    case 5:
+                        intent=new Intent(context, AdmissionFeesActivity.class);
                         break;
                     default:
                         break;

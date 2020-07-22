@@ -22,6 +22,7 @@ public class OthersActivity extends AppCompatActivity {
     CheckConnection connection = new CheckConnection();
 
     @Override
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_others);

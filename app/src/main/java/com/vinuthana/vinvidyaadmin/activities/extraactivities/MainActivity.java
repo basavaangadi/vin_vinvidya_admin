@@ -169,8 +169,8 @@ public class MainActivity extends AppCompatActivity {
             titleOthers = new ArrayList<>(Arrays.asList("Events", "Gallery", "Syllabus","Assignment"));
             imagesOthers = new ArrayList<>(Arrays.asList(R.drawable.ic_calendar_check_black_48dp, R.drawable.ic_folder_multiple_image_black_48dp, R.drawable.ic_book_open_variant_black_48dp,R.drawable.ic_assignment_24dp));
         }else{
-            titleOthers = new ArrayList<>(Arrays.asList("Events", "Gallery", "Syllabus","Assignment","Studen Credentials"));
-            imagesOthers = new ArrayList<>(Arrays.asList(R.drawable.ic_calendar_check_black_48dp, R.drawable.ic_folder_multiple_image_black_48dp, R.drawable.ic_book_open_variant_black_48dp,R.drawable.ic_assignment_24dp,R.drawable.ic_account_circle_black_24dp));
+            titleOthers = new ArrayList<>(Arrays.asList("Events", "Gallery", "Syllabus","Assignment","Student Credentials","Fees Section"));
+            imagesOthers = new ArrayList<>(Arrays.asList(R.drawable.ic_calendar_check_black_48dp, R.drawable.ic_folder_multiple_image_black_48dp, R.drawable.ic_book_open_variant_black_48dp,R.drawable.ic_assignment_24dp,R.drawable.ic_account_circle_black_24dp,R.drawable.ic_attach_money_black_24dp));
         }
 
 
