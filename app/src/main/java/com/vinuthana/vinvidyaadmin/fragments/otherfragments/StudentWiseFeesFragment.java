@@ -24,6 +24,7 @@ import com.vinuthana.vinvidyaadmin.adapters.FeesTypeSpinnerDataAdapter;
 import com.vinuthana.vinvidyaadmin.adapters.SectionSpinnerDataAdapter;
 import com.vinuthana.vinvidyaadmin.adapters.StudentListSpinnerAdapter;
 import com.vinuthana.vinvidyaadmin.adapters.YearSpinnerDataAdapter;
+import com.vinuthana.vinvidyaadmin.utils.AD;
 import com.vinuthana.vinvidyaadmin.utils.GetResponse;
 import com.vinuthana.vinvidyaadmin.utils.Session;
 
@@ -38,7 +39,7 @@ public class StudentWiseFeesFragment extends Fragment {
     String strSchId,strClass="",strSchoolId="",strClassId="",strStudentId="",strAcademicYearId="",strfees_type_Id="",strFeeType="";
     RecyclerView rcvwAdmissionFees;
     Session session;
-    String url="http://192.168.43.155:8080/AdmissionFeesFragment/fees/admissionfees.jsp";
+    //String url="http://192.168.43.155:8080/AdmissionFeesFragment/fees/admissionfees.jsp";
 
     public StudentWiseFeesFragment() {
         // Required empty public constructor
@@ -152,25 +153,6 @@ public class StudentWiseFeesFragment extends Fragment {
             }
         });
 
-        /*spnrStudNames.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                TextView textView= spnrStudNames.getSelectedView().findViewById(R.id.list);
-                strStudentId = parent.getItemAtPosition(position).toString();
-                //strStudentId= parent.getItemAtPosition(position).toString();
-                String strStudentId =textView.getText().toString();
-                if(!(strStudentId.equalsIgnoreCase("Select Student"))){
-
-                }
-
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });*/
-
 
         spnrStudNames.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -208,6 +190,7 @@ public class StudentWiseFeesFragment extends Fragment {
     }
 
     class GetYear extends AsyncTask<String, JSONArray, Void> {
+        String url ="http://192.168.43.155:8080/netvinvidyawebapi/operation/otherOperation.jsp";
 
         ProgressDialog progressDialog;
 
@@ -228,9 +211,9 @@ public class StudentWiseFeesFragment extends Fragment {
 
             try {
                 outObject.put("OperationName", "GetYear");
-                JSONObject userData = new JSONObject();
-                userData.put("SchoolId", strSchoolId);
-                outObject.put("userData", userData);
+                JSONObject otherData = new JSONObject();
+                otherData.put("SchoolId", strSchoolId);
+                outObject.put("otherData", otherData);
                 Log.e("outObject is ", outObject.toString());
                 String strRespText = response.getServerResopnse(url, outObject.toString());
                 Log.e("Response is", strRespText);
@@ -271,7 +254,7 @@ public class StudentWiseFeesFragment extends Fragment {
     }
 
     class GetFeesType extends AsyncTask<String, JSONArray, Void> {
-
+        String url ="http://192.168.43.155:8080/netvinvidyawebapi/operation/otherOperation.jsp";
         ProgressDialog progressDialog;
 
         @Override
@@ -291,9 +274,9 @@ public class StudentWiseFeesFragment extends Fragment {
 
             try {
                 outObject.put("OperationName", "GetFeesType");
-                JSONObject userData = new JSONObject();
-                userData.put("SchoolId", strSchoolId);
-                outObject.put("userData", userData);
+                JSONObject otherData = new JSONObject();
+                otherData.put("SchoolId", strSchoolId);
+                outObject.put("otherData", otherData);
                 Log.e("outObject is ", outObject.toString());
                 String strRespText = response.getServerResopnse(url, outObject.toString());
                 Log.e("Response is", strRespText);
@@ -337,7 +320,7 @@ public class StudentWiseFeesFragment extends Fragment {
 
 
     class GetClass extends AsyncTask<String, JSONArray, Void> {
-
+        String url = AD.url.base_url + "classsubjectOperations.jsp";
         ProgressDialog progressDialog;
 
         @Override
@@ -356,11 +339,11 @@ public class StudentWiseFeesFragment extends Fragment {
             JSONObject outObject = new JSONObject();
 
             try {
-                outObject.put("OperationName", "GetClass");
-                JSONObject userData = new JSONObject();
-                userData.put("SchoolId", strSchoolId);
-                userData.put("AcademicYearId", strAcademicYearId);
-                outObject.put("userData", userData);
+                outObject.put("OperationName",getString(R.string.web_Staff_ClassNames));
+                JSONObject classSubjectData = new JSONObject();
+                classSubjectData.put("SchoolId", strSchoolId);
+                classSubjectData.put("AcademicYearId", strAcademicYearId);
+                outObject.put("classSubjectData", classSubjectData);
                 Log.e("outObject is ", outObject.toString());
                 String strRespText = response.getServerResopnse(url, outObject.toString());
                 Log.e("Response is", strRespText);
@@ -401,6 +384,7 @@ public class StudentWiseFeesFragment extends Fragment {
     }
 
     class GetSection extends AsyncTask<String, JSONArray,Void> {
+        String url = AD.url.base_url + "classsubjectOperations.jsp";
         ProgressDialog progressDialog;
 
         @Override
@@ -419,12 +403,12 @@ public class StudentWiseFeesFragment extends Fragment {
             JSONObject outObject = new JSONObject();
 
             try {
-                outObject.put("OperationName", "Class_with_Section");
-                JSONObject userData = new JSONObject();
-                userData.put("class", strClass);
-                userData.put("SchoolId", strSchoolId);
-                userData.put("AcademicYearId", strAcademicYearId);
-                outObject.put("userData", userData);
+                outObject.put("OperationName",getString(R.string.web_Staff_Class_With_Section));
+                JSONObject classSubjectData = new JSONObject();
+                classSubjectData.put("class", strClass);
+                classSubjectData.put("SchoolId", strSchoolId);
+                classSubjectData.put("AcademicYearId", strAcademicYearId);
+                outObject.put("classSubjectData", classSubjectData);
                 Log.e("outObject is ", outObject.toString());
                 String strRespText = response.getServerResopnse(url, outObject.toString());
                 Log.e("Response is", strRespText);
@@ -466,7 +450,7 @@ public class StudentWiseFeesFragment extends Fragment {
     }
 
     class GetStudentList  extends AsyncTask<String, JSONArray,Void> {
-
+        String url = AD.url.base_url + "classsubjectOperations.jsp";
         ProgressDialog progressDialog;
         @Override
         protected void onPreExecute() {
@@ -484,12 +468,12 @@ public class StudentWiseFeesFragment extends Fragment {
             JSONObject outObject= new JSONObject();
 
             try {
-                outObject.put("OperationName","getClasswiseStudentList");
-                JSONObject userData= new JSONObject();
-                userData.put("SchoolId",strSchoolId);
-                userData.put("AcademicYearId",strAcademicYearId);
-                userData.put("classId",strClassId);
-                outObject.put("userData",userData);
+                outObject.put("OperationName",getString(R.string.web_getClasswiseStudentsList));
+                JSONObject classSubjectData= new JSONObject();
+                classSubjectData.put("SchoolId",strSchoolId);
+                classSubjectData.put("AcademicYearId",strAcademicYearId);
+                classSubjectData.put("classId",strClassId);
+                outObject.put("classSubjectData",classSubjectData);
                 Log.e("outObject is ",outObject.toString());
                 String strRespText=response.getServerResopnse(url,outObject.toString());
                 Log.e("Response is",strRespText);

@@ -1,3 +1,4 @@
+
 package com.vinuthana.vinvidyaadmin.activities.otheractivities;
 
 import android.app.ProgressDialog;
@@ -22,7 +23,8 @@ import org.json.JSONObject;
 public class ViewFeesCollectedStudWise extends AppCompatActivity {
     RecyclerView rcvwAdmissionFees;
     String strFeeType,strStudentId;
-    String url="http://192.168.43.155:8080/AdmissionFeesFragment/fees/admissionfees.jsp";
+    //String url="http://192.168.43.155:8080/AdmissionFeesFragment/fees/admissionfees.jsp";
+    String url ="http://192.168.43.155:8080/netvinvidyawebapi/operation/otherOperation.jsp";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,9 +64,9 @@ public class ViewFeesCollectedStudWise extends AppCompatActivity {
 
             try {
                 outObject.put("OperationName","GetAdmissionFeesStudWise");
-                JSONObject userData= new JSONObject();
-                userData.put("StudentId",strStudentId);
-                outObject.put("userData",userData);
+                JSONObject otherData= new JSONObject();
+                otherData.put("StudentId",strStudentId);
+                outObject.put("otherData",otherData);
                 Log.e("outObject is ",outObject.toString());
                 String strRespText=response.getServerResopnse(url,outObject.toString());
                 Log.e("Response is",strRespText);

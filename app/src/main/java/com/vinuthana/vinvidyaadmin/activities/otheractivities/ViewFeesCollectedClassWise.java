@@ -22,7 +22,8 @@ import org.json.JSONObject;
 public class ViewFeesCollectedClassWise extends AppCompatActivity {
     String strClassId,strFeeType;
     RecyclerView rcvwAdmissionFees;
-    String url="http://192.168.43.155:8080/AdmissionFeesFragment/fees/admissionfees.jsp";
+    //String url="http://192.168.43.155:8080/AdmissionFeesFragment/fees/admissionfees.jsp";
+    String url ="http://192.168.43.155:8080/netvinvidyawebapi/operation/otherOperation.jsp";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,10 +60,10 @@ public class ViewFeesCollectedClassWise extends AppCompatActivity {
             JSONObject outObject= new JSONObject();
 
             try {
-                outObject.put("OperationName","GetPaidAndBalanceClassIdWise");
-                JSONObject userData= new JSONObject();
-                userData.put("ClassId",strClassId);
-                outObject.put("userData",userData);
+                outObject.put("OperationName","GetAdmissionFeesClassIdWise");
+                JSONObject otherData= new JSONObject();
+                otherData.put("ClassId",strClassId);
+                outObject.put("otherData",otherData);
                 Log.e("outObject is ",outObject.toString());
                 String strRespText=response.getServerResopnse(url,outObject.toString());
                 Log.e("Response is",strRespText);

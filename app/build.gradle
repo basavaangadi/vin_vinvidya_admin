@@ -8,8 +8,8 @@ android {
         applicationId "com.vinuthana.vinvidyaadmin"
         minSdkVersion 15
         targetSdkVersion 28
-        versionCode 41
-        versionName "20.04.01"
+        versionCode 42
+        versionName "20.08.01"
         multiDexEnabled true
         vectorDrawables.useSupportLibrary = true
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"

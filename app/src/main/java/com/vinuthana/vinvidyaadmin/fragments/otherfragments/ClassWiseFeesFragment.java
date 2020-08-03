@@ -22,6 +22,7 @@ import com.vinuthana.vinvidyaadmin.adapters.ClassSpinnerDataAdapter;
 import com.vinuthana.vinvidyaadmin.adapters.FeesTypeSpinnerDataAdapter;
 import com.vinuthana.vinvidyaadmin.adapters.SectionSpinnerDataAdapter;
 import com.vinuthana.vinvidyaadmin.adapters.YearSpinnerDataAdapter;
+import com.vinuthana.vinvidyaadmin.utils.AD;
 import com.vinuthana.vinvidyaadmin.utils.GetResponse;
 import com.vinuthana.vinvidyaadmin.utils.Session;
 
@@ -35,7 +36,7 @@ public class ClassWiseFeesFragment extends Fragment {
     Spinner spnrYear,spnrFeesType,spnrClass,spnrSection;
     String strClass="",strClassId="",strAcademicYearId="",strfees_type_Id="",strFeeType="",strSchoolId="";
 Session session;
-    String url="http://192.168.43.155:8080/AdmissionFeesFragment/fees/admissionfees.jsp";
+   // String url="http://192.168.43.155:8080/AdmissionFeesFragment/fees/admissionfees.jsp";
 
     public ClassWiseFeesFragment() {
         // Required empty public constructor
@@ -160,6 +161,7 @@ Session session;
     }
 
     class GetYear extends AsyncTask<String, JSONArray, Void> {
+        String url ="http://192.168.43.155:8080/netvinvidyawebapi/operation/otherOperation.jsp";
 
         ProgressDialog progressDialog;
 
@@ -180,9 +182,9 @@ Session session;
 
             try {
                 outObject.put("OperationName", "GetYear");
-                JSONObject userData = new JSONObject();
-                userData.put("SchoolId", strSchoolId);
-                outObject.put("userData", userData);
+                JSONObject otherData = new JSONObject();
+                otherData.put("SchoolId", strSchoolId);
+                outObject.put("otherData", otherData);
                 Log.e("outObject is ", outObject.toString());
                 String strRespText = response.getServerResopnse(url, outObject.toString());
                 Log.e("Response is", strRespText);
@@ -223,6 +225,7 @@ Session session;
     }
 
     class GetFeesType extends AsyncTask<String, JSONArray, Void> {
+        String url ="http://192.168.43.155:8080/netvinvidyawebapi/operation/otherOperation.jsp";
 
         ProgressDialog progressDialog;
 
@@ -243,9 +246,9 @@ Session session;
 
             try {
                 outObject.put("OperationName", "GetFeesType");
-                JSONObject userData = new JSONObject();
-                userData.put("SchoolId", strSchoolId);
-                outObject.put("userData", userData);
+                JSONObject otherData = new JSONObject();
+                otherData.put("SchoolId", strSchoolId);
+                outObject.put("otherData", otherData);
                 Log.e("outObject is ", outObject.toString());
                 String strRespText = response.getServerResopnse(url, outObject.toString());
                 Log.e("Response is", strRespText);
@@ -289,7 +292,7 @@ Session session;
 
 
     class GetClass extends AsyncTask<String, JSONArray, Void> {
-
+        String url = AD.url.base_url + "classsubjectOperations.jsp";
         ProgressDialog progressDialog;
 
         @Override
@@ -308,11 +311,11 @@ Session session;
             JSONObject outObject = new JSONObject();
 
             try {
-                outObject.put("OperationName", "GetClass");
-                JSONObject userData = new JSONObject();
-                userData.put("SchoolId", strSchoolId);
-                userData.put("AcademicYearId", strAcademicYearId);
-                outObject.put("userData", userData);
+                outObject.put("OperationName", getString(R.string.web_Staff_ClassNames));
+                JSONObject classSubjectData = new JSONObject();
+                classSubjectData.put("SchoolId", strSchoolId);
+                classSubjectData.put("AcademicYearId", strAcademicYearId);
+                outObject.put("classSubjectData", classSubjectData);
                 Log.e("outObject is ", outObject.toString());
                 String strRespText = response.getServerResopnse(url, outObject.toString());
                 Log.e("Response is", strRespText);
@@ -353,6 +356,7 @@ Session session;
     }
 
     class GetSection extends AsyncTask<String, JSONArray,Void> {
+        String url = AD.url.base_url + "classsubjectOperations.jsp";
         ProgressDialog progressDialog;
 
         @Override
@@ -371,12 +375,12 @@ Session session;
             JSONObject outObject = new JSONObject();
 
             try {
-                outObject.put("OperationName", "Class_with_Section");
-                JSONObject userData = new JSONObject();
-                userData.put("class", strClass);
-                userData.put("SchoolId", strSchoolId);
-                userData.put("AcademicYearId", strAcademicYearId);
-                outObject.put("userData", userData);
+                outObject.put("OperationName",getString(R.string.web_Staff_Class_With_Section));
+                JSONObject classSubjectData = new JSONObject();
+                classSubjectData.put("class", strClass);
+                classSubjectData.put("SchoolId", strSchoolId);
+                classSubjectData.put("AcademicYearId", strAcademicYearId);
+                outObject.put("classSubjectData", classSubjectData);
                 Log.e("outObject is ", outObject.toString());
                 String strRespText = response.getServerResopnse(url, outObject.toString());
                 Log.e("Response is", strRespText);
