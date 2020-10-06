@@ -1,6 +1,7 @@
 package com.vinuthana.vinvidyaadmin.adapters;
 
 import android.app.Activity;
+import android.content.ClipboardManager;
 import android.content.Context;
 import android.graphics.Color;
 import android.os.Build;
@@ -295,6 +296,43 @@ public class ExamDetailsRecylerAdapterBelowKitkat extends RecyclerView.Adapter<E
             btnScheduleStatusBelowKitkat=itemView.findViewById(R.id.btnScheduleStatusBelowKitkat);
             btnSyllabusStatusBelowKitkat=itemView.findViewById(R.id.btnSyllabusStatusBelowKitkat);
             btnMarksStatusBelowKitkat=itemView.findViewById(R.id.btnMarksStatusBelowKitkat);
+
+            tvSubjectBelowKitkat.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)exmschActivity.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvSubjectBelowKitkat.getText());
+                    Toast.makeText(exmschActivity, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+            tvClassBelowKitkat.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)exmschActivity.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvClassBelowKitkat.getText());
+                    Toast.makeText(exmschActivity, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+            tvClassExmSchedule.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)exmschActivity.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvClassExmSchedule.getText());
+                    Toast.makeText(exmschActivity, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+            tvExamExmSchedule.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)exmschActivity.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvExamExmSchedule.getText());
+                    Toast.makeText(exmschActivity, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
 
         }
     }

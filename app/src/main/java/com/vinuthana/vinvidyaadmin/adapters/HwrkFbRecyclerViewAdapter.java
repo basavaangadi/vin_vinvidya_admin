@@ -1,5 +1,6 @@
 package com.vinuthana.vinvidyaadmin.adapters;
 
+import android.content.ClipboardManager;
 import android.content.Context;
 import android.graphics.Color;
 import android.support.v7.widget.CardView;
@@ -8,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.vinuthana.vinvidyaadmin.R;
 
@@ -69,6 +71,35 @@ public class HwrkFbRecyclerViewAdapter extends RecyclerView.Adapter<HwrkFbRecycl
             tvHWFbStatus = (TextView) itemView.findViewById(R.id.tvHWFbStatus);
             tvCurHWFbStdtName = (TextView) itemView.findViewById(R.id.tvCurHWFbStdtName);
             tvCurHwFbRollNo = (TextView) itemView.findViewById(R.id.tvCurHwFbRollNo);
+
+            tvHWFbStatus.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)hmwrkFbContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvHWFbStatus.getText());
+                    Toast.makeText(hmwrkFbContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+            tvCurHWFbStdtName.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)hmwrkFbContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvCurHWFbStdtName.getText());
+                    Toast.makeText(hmwrkFbContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+            tvCurHwFbRollNo.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)hmwrkFbContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvCurHwFbRollNo.getText());
+                    Toast.makeText(hmwrkFbContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+
         }
     }
 }

@@ -1,5 +1,6 @@
 package com.vinuthana.vinvidyaadmin.adapters;
 
+import android.content.ClipboardManager;
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -115,6 +116,44 @@ public class SetExamScheduleAdapter  extends
             lytForNoticeOperation = myView.findViewById(R.id.lytForNoticeOperation);
             btnNoticeDelete = myView.findViewById(R.id.btnNoticeDelete);
             btnSetExmSchdlAdpter = myView.findViewById(R.id.btnSetExmSchdlAdpter);
+
+            tvScduleToBeSetSlNO.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)ntcContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvScduleToBeSetSlNO.getText());
+                    Toast.makeText(ntcContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+            tvScduleToBeSetclass.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)ntcContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvScduleToBeSetclass.getText());
+                    Toast.makeText(ntcContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+            tvScduleToBeSetSubject.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)ntcContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvScduleToBeSetSubject.getText());
+                    Toast.makeText(ntcContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+            tvNtcNoteSntDate.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)ntcContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvNtcNoteSntDate.getText());
+                    Toast.makeText(ntcContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+
         }
     }
 

@@ -1,5 +1,6 @@
 package com.vinuthana.vinvidyaadmin.adapters;
 
+import android.content.ClipboardManager;
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -117,6 +118,44 @@ public class ReminderRecylcerViewAdapter extends RecyclerView.Adapter<ReminderRe
             lytForReminderOperation =  itemView.findViewById(R.id.lytForReminderOperation);
             btnRmdrDelete=itemView.findViewById(R.id.btnRmdrDelete);
             btnRmdrEdit=itemView.findViewById(R.id.btnRmdrEdit);
+
+            tvRmndrNoteTitle.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)rmdrContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvRmndrNoteTitle.getText());
+                    Toast.makeText(rmdrContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+            tvRmndrNote.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)rmdrContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvRmndrNote.getText());
+                    Toast.makeText(rmdrContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+            tvRmndrSentDate.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)rmdrContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvRmndrSentDate.getText());
+                    Toast.makeText(rmdrContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+            tvRmndrOnDate.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)rmdrContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvRmndrOnDate.getText());
+                    Toast.makeText(rmdrContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+
 
         }
 

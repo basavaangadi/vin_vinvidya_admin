@@ -1,5 +1,6 @@
 package com.vinuthana.vinvidyaadmin.adapters;
 
+import android.content.ClipboardManager;
 import android.content.Context;
 import android.graphics.Color;
 import android.support.v7.widget.RecyclerView;
@@ -8,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.vinuthana.vinvidyaadmin.R;
 
@@ -75,6 +77,55 @@ public class AtndRecyclerAdapter extends RecyclerView.Adapter<AtndRecyclerAdapte
             tvAtndDate = (TextView) itemView.findViewById(R.id.tvAtndDate);
             tvAtndStatus = (TextView) itemView.findViewById(R.id.tvAtndStatus);
             //lynrLyt=(LinearLayout) itemView.findViewById(R.id.lynrLyt);
+
+            tvAtndStdName.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)mContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvAtndStdName.getText());
+                    Toast.makeText(mContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+            tvAndRollNo.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)mContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvAndRollNo.getText());
+                    Toast.makeText(mContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+            tvAtndClass.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)mContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvAtndClass.getText());
+                    Toast.makeText(mContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+            tvAtndDate.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)mContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvAtndDate.getText());
+                    Toast.makeText(mContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+            tvAtndStatus.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)mContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvAtndStatus.getText());
+                    Toast.makeText(mContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+
+
         }
+
     }
 }

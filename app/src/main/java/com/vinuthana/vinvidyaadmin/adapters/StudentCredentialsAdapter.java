@@ -1,5 +1,6 @@
 package com.vinuthana.vinvidyaadmin.adapters;
 
+import android.content.ClipboardManager;
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.text.Html;
@@ -141,6 +142,54 @@ public class StudentCredentialsAdapter extends RecyclerView.Adapter<StudentCrede
             tvStudentCredentialsByStudStudentName = (TextView) itemView.findViewById(R.id.tvStudentCredentialsByStudStudentName);
             btnGetStudentCredentialsByStudEdt =itemView.findViewById(R.id.btnGetStudentCredentialsByStudEdt);
             btnParentNoteDelete=itemView.findViewById(R.id.btnParentNoteDelete);
+
+
+            tvStudentCredentialsByStudPhno.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)prnNtContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvStudentCredentialsByStudPhno.getText());
+                    Toast.makeText(prnNtContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+            tvStudentCredentialsByPassword.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)prnNtContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvStudentCredentialsByPassword.getText());
+                    Toast.makeText(prnNtContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+            tvStudentCredentialsByStudClass.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)prnNtContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvStudentCredentialsByStudClass.getText());
+                    Toast.makeText(prnNtContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+            tvStudentCredentialsByStudRollNo.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)prnNtContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvStudentCredentialsByStudRollNo.getText());
+                    Toast.makeText(prnNtContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+            tvStudentCredentialsByStudStudentName.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)prnNtContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvStudentCredentialsByStudStudentName.getText());
+                    Toast.makeText(prnNtContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+
         }
     }
     public interface onCredentialsClickListner{

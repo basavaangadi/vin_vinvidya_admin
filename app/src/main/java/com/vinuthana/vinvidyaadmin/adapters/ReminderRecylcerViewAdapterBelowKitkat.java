@@ -1,5 +1,6 @@
 package com.vinuthana.vinvidyaadmin.adapters;
 
+import android.content.ClipboardManager;
 import android.content.Context;
 import android.graphics.Color;
 import android.os.Build;
@@ -124,6 +125,44 @@ public class ReminderRecylcerViewAdapterBelowKitkat extends RecyclerView.Adapter
             lytForReminderOperationBelowKitkat =  itemView.findViewById(R.id.lytForReminderOperationBelowKitkat);
             btnRmdrDeleteBelowKitkat=itemView.findViewById(R.id.btnRmdrDeleteBelowKitkat);
             btnRmdrEditBelowKitkat=itemView.findViewById(R.id.btnRmdrEditBelowKitkat);
+
+            tvRmndrNoteTitleBelowKitkat.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)rmdrContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvRmndrNoteTitleBelowKitkat.getText());
+                    Toast.makeText(rmdrContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+            tvRmndrNoteBelowKitkat.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)rmdrContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvRmndrNoteBelowKitkat.getText());
+                    Toast.makeText(rmdrContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+            tvRmndrSntDateBelowKitkat.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)rmdrContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvRmndrSntDateBelowKitkat.getText());
+                    Toast.makeText(rmdrContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+            tvRmndrOnDateBelowKitkat.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)rmdrContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvRmndrOnDateBelowKitkat.getText());
+                    Toast.makeText(rmdrContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+
 
         }
 

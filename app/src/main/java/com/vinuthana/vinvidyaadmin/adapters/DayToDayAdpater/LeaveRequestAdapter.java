@@ -1,5 +1,6 @@
 package com.vinuthana.vinvidyaadmin.adapters.DayToDayAdpater;
 
+import android.content.ClipboardManager;
 import android.content.Context;
 import android.graphics.Color;
 import android.os.Build;
@@ -88,6 +89,53 @@ public class LeaveRequestAdapter extends RecyclerView.Adapter<LeaveRequestAdapte
             tvStudLeaveDispToDate = myView.findViewById(R.id.tvStudLeaveDispToDate);
             tvStudLeaveDispFromDate = myView.findViewById(R.id.tvStudLeaveDispFromDate);
             crdviewStudLeaveDisp =  myView.findViewById(R.id.crdviewStudLeaveDisp);
+
+            tvStudLeaveDispTitle.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)studLeaveContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvStudLeaveDispTitle.getText());
+                    Toast.makeText(studLeaveContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+
+            tvStudLeaveDispDisc.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)studLeaveContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvStudLeaveDispDisc.getText());
+                    Toast.makeText(studLeaveContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+            tvStudLeaveStudentName.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)studLeaveContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvStudLeaveStudentName.getText());
+                    Toast.makeText(studLeaveContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+            tvStudLeaveDispToDate.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)studLeaveContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvStudLeaveDispToDate.getText());
+                    Toast.makeText(studLeaveContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+            tvStudLeaveDispFromDate.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)studLeaveContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvStudLeaveDispFromDate.getText());
+                    Toast.makeText(studLeaveContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
 
 
         }

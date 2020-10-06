@@ -1,6 +1,7 @@
 package com.vinuthana.vinvidyaadmin.adapters;
 
 import android.app.Activity;
+import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.CardView;
@@ -10,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 import com.vinuthana.vinvidyaadmin.R;
@@ -111,6 +113,16 @@ public class RviewAdapterNoticeBoard extends RecyclerView.Adapter<RviewAdapterNo
             imageView = (ImageView) itemView.findViewById(R.id.imageView);
             cardList = (CardView) itemView.findViewById(R.id.cardList);
             mContext = itemView.getContext();
+            tvText.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)context.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvText.getText());
+                    Toast.makeText(context, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+
         }
     }
 }

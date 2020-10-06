@@ -1,6 +1,7 @@
 package com.vinuthana.vinvidyaadmin.adapters;
 
 import android.app.Activity;
+import android.content.ClipboardManager;
 import android.content.Context;
 import android.graphics.Color;
 import android.os.Build;
@@ -151,6 +152,54 @@ public class HmWrkRecyclerViewAdapterAbvKitKat extends RecyclerView.Adapter<HmWr
             btnHmwrkEditAbvKitKat = itemView.findViewById(R.id.btnHmwrkEditAbvKitKat);
             btnHmwrkDeleteAbvKitKat = itemView.findViewById(R.id.btnHmwrkDeleteAbvKitKat);
             btnHmwrkFedbackAbvKitKat = itemView.findViewById(R.id.btnHmwrkFedbackAbvKitKat);
+
+
+            tvSubjectHmCrdAbvKitKat.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)hmwrkContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvSubjectHmCrdAbvKitKat.getText());
+                    Toast.makeText(hmwrkContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+            tvHomeWorkHmCrdAbvKitKat.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)hmwrkContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvHomeWorkHmCrdAbvKitKat.getText());
+                    Toast.makeText(hmwrkContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+            tvDateHmCrdAbvKitKat.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)hmwrkContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvDateHmCrdAbvKitKat.getText());
+                    Toast.makeText(hmwrkContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+            tvChptNameHmCrdAbvKitKat.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)hmwrkContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvChptNameHmCrdAbvKitKat.getText());
+                    Toast.makeText(hmwrkContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+            tvClassHmCrdAbvKitKat.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)hmwrkContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvClassHmCrdAbvKitKat.getText());
+                    Toast.makeText(hmwrkContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+
         }
     }
 

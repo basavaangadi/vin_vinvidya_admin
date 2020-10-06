@@ -1,6 +1,7 @@
 package com.vinuthana.vinvidyaadmin.adapters;
 
 import android.app.Activity;
+import android.content.ClipboardManager;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
@@ -112,6 +113,44 @@ public class ReportRecyclerViewAdapter extends RecyclerView.Adapter<ReportRecycl
 
             btnReportCardViewEdit = itemView.findViewById(R.id.btnReportCardViewEdit);
             btnReportCardViewDelete = itemView.findViewById(R.id.btnReportCardViewDelete);
+
+            tvReportCardViewSubject.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)reportContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvReportCardViewSubject.getText());
+                    Toast.makeText(reportContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+            tvReportCardViewPeriod.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)reportContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvReportCardViewPeriod.getText());
+                    Toast.makeText(reportContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+            tvReportCardViewClass.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)reportContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvReportCardViewClass.getText());
+                    Toast.makeText(reportContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+            tvReportCardViewReport.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)reportContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvReportCardViewReport.getText());
+                    Toast.makeText(reportContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+
 
         }
     }

@@ -1,5 +1,6 @@
 package com.vinuthana.vinvidyaadmin.adapters;
 
+import android.content.ClipboardManager;
 import android.content.Context;
 import android.graphics.Color;
 import android.os.Build;
@@ -123,6 +124,44 @@ public class PrntNtRecyclerViewAdapterBelowKitKat extends RecyclerView.Adapter<P
             tvPrtNtNoteOnDateBelowKitKat = (TextView) itemView.findViewById(R.id.tvPrtNtNoteOnDateBelowKitKat);
             btnParentNoteEditBelowKitKat=itemView.findViewById(R.id.btnParentNoteEditBelowKitKat);
             btnParentNoteDeleteBelowKitKat=itemView.findViewById(R.id.btnParentNoteDeleteBelowKitKat);
+
+            tvPrtNtNoteTitleBelowKitKat.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)prnNtContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvPrtNtNoteTitleBelowKitKat.getText());
+                    Toast.makeText(prnNtContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+            tvPrtNtNoteBelowKitKat.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)prnNtContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvPrtNtNoteBelowKitKat.getText());
+                    Toast.makeText(prnNtContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+            tvPrtNtNoteSentDateBelowKitKat.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)prnNtContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvPrtNtNoteSentDateBelowKitKat.getText());
+                    Toast.makeText(prnNtContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+            tvPrtNtNoteOnDateBelowKitKat.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)prnNtContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvPrtNtNoteOnDateBelowKitKat.getText());
+                    Toast.makeText(prnNtContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+
         }
     }
     public interface OnNoticeViewClickListener{

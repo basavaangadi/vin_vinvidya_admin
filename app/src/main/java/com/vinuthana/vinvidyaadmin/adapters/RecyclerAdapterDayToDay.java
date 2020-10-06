@@ -1,6 +1,8 @@
 package com.vinuthana.vinvidyaadmin.adapters;
 
 import android.app.Activity;
+import android.content.ClipboardManager;
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
@@ -9,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 import com.vinuthana.vinvidyaadmin.R;
@@ -115,6 +118,16 @@ public class RecyclerAdapterDayToDay extends RecyclerView.Adapter<RecyclerAdapte
             tvText = (TextView) itemView.findViewById(R.id.tvText);
             imageView = (ImageView) itemView.findViewById(R.id.imageView);
             cardList = (CardView) itemView.findViewById(R.id.cardList);
+            tvText.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)context.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvText.getText());
+                    Toast.makeText(context, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+
         }
     }
 }

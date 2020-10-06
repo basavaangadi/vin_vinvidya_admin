@@ -1,6 +1,7 @@
 package com.vinuthana.vinvidyaadmin.adapters;
 
 import android.app.Activity;
+import android.content.ClipboardManager;
 import android.content.Context;
 import android.graphics.Color;
 import android.os.Build;
@@ -187,6 +188,54 @@ public class ExamSyllabusRecycler extends RecyclerView.Adapter<ExamSyllabusRecyc
             btnEditExmSyllabus=itemView.findViewById(R.id.btnEditExmSyllabus);
             btnDeleteExmSyllabus=itemView.findViewById(R.id.btnDeleteExmSyllabus);
             btnEnteMarksSyllabus=itemView.findViewById(R.id.btnEnteMarksSyllabus);
+
+
+            tvExamExmSyllabus.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)exmsylcContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvExamExmSyllabus.getText());
+                    Toast.makeText(exmsylcContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+            tvSubjectExmSyllabus.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)exmsylcContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvSubjectExmSyllabus.getText());
+                    Toast.makeText(exmsylcContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+            tvClassExmSyllabus.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)exmsylcContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvClassExmSyllabus.getText());
+                    Toast.makeText(exmsylcContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+            tvSyllabusExmSyllabus.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)exmsylcContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvSyllabusExmSyllabus.getText());
+                    Toast.makeText(exmsylcContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+            tvExamExmDtTime.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)exmsylcContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvExamExmDtTime.getText());
+                    Toast.makeText(exmsylcContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+
         }
     }
     public interface OnExamSyllabusClickListener{

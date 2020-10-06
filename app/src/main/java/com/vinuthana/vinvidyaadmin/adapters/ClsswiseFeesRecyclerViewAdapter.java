@@ -41,11 +41,39 @@ public class ClsswiseFeesRecyclerViewAdapter extends  RecyclerView.Adapter<Clssw
             else {
                 tvBalAmt.setVisibility(View.INVISIBLE);
             }
+            tvRollNum.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)mContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvRollNum.getText());
+                    Toast.makeText(mContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+
             tvStudName.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     ClipboardManager cm = (ClipboardManager)mContext.getSystemService(Context.CLIPBOARD_SERVICE);
                     cm.setText(tvStudName.getText());
+                    Toast.makeText(mContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+            tvTotalAmt.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)mContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvTotalAmt.getText());
+                    Toast.makeText(mContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+            tvBalAmt.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)mContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvBalAmt.getText());
                     Toast.makeText(mContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
 
                 }

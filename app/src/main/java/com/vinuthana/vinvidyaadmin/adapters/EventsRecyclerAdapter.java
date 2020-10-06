@@ -2,6 +2,7 @@ package com.vinuthana.vinvidyaadmin.adapters;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.graphics.Color;
@@ -15,6 +16,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 import com.vinuthana.vinvidyaadmin.R;
@@ -93,6 +95,37 @@ public class EventsRecyclerAdapter extends RecyclerView.Adapter<EventsRecyclerAd
             txtEventsMonth = (TextView) itemView.findViewById(R.id.txtEventsMonth);
             tvEventsTitle = (TextView) itemView.findViewById(R.id.tvEventsTitle);
             cardEvents = (CardView) itemView.findViewById(R.id.cardEvents);
+
+            tvEventsDate.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)activity.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvEventsDate.getText());
+                    Toast.makeText(activity, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+            txtEventsMonth.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)activity.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(txtEventsMonth.getText());
+                    Toast.makeText(activity, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+            tvEventsTitle.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)activity.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvEventsTitle.getText());
+                    Toast.makeText(activity, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+
+
+
             cardEvents.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {

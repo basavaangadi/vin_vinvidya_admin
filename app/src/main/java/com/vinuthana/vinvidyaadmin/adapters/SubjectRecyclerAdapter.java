@@ -1,5 +1,6 @@
 package com.vinuthana.vinvidyaadmin.adapters;
 
+import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.CardView;
@@ -11,6 +12,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.vinuthana.vinvidyaadmin.R;
 import com.vinuthana.vinvidyaadmin.activities.otheractivities.SubjectSyllabusActivity;
@@ -85,6 +88,17 @@ public class SubjectRecyclerAdapter extends RecyclerView.Adapter<SubjectRecycler
             syllabusTitleSyl = (TextView) itemView.findViewById(R.id.syllabusTitleSyl);
             imageView = (ImageView) itemView.findViewById(R.id.imageViewSyl);
             cardSyllabus = (CardView) itemView.findViewById(R.id.cardSyllabus);
+
+            tvSubjectSyl.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)subContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvSubjectSyl.getText());
+                    Toast.makeText(subContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+
 
             cardSyllabus.setOnClickListener(new View.OnClickListener() {
                 @Override

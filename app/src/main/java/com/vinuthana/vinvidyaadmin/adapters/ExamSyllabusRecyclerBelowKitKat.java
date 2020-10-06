@@ -1,6 +1,7 @@
 package com.vinuthana.vinvidyaadmin.adapters;
 
 import android.app.Activity;
+import android.content.ClipboardManager;
 import android.content.Context;
 import android.graphics.Color;
 import android.os.Build;
@@ -183,6 +184,53 @@ public class ExamSyllabusRecyclerBelowKitKat extends RecyclerView.Adapter<ExamSy
             btnEditExmSyllabusBlwKitKat=itemView.findViewById(R.id.btnEditExmSyllabusBlwKitKat);
             btnDeleteExmSyllabusBlwKitKat=itemView.findViewById(R.id.btnDeleteExmSyllabusBlwKitKat);
             btnEnteMarksSyllabusBlwKitKat=itemView.findViewById(R.id.btnEnteMarksSyllabusBlwKitKat);
+
+            tvExamExmSyllabusBlwKitKat.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)exmsylcContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvExamExmSyllabusBlwKitKat.getText());
+                    Toast.makeText(exmsylcContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+            tvSubjectExmSyllabusBlwKitKat.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)exmsylcContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvSubjectExmSyllabusBlwKitKat.getText());
+                    Toast.makeText(exmsylcContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+            tvClassExmSyllabusBlwKitKat.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)exmsylcContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvClassExmSyllabusBlwKitKat.getText());
+                    Toast.makeText(exmsylcContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+            tvSyllabusExmSyllabusBlwKitKat.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)exmsylcContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvSyllabusExmSyllabusBlwKitKat.getText());
+                    Toast.makeText(exmsylcContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+            tvExamExmDtTimeBlwKitKat.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)exmsylcContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvExamExmDtTimeBlwKitKat.getText());
+                    Toast.makeText(exmsylcContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+
         }
     }
     public interface OnExamSyllabusClickListener{

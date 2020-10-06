@@ -1,12 +1,16 @@
 package com.vinuthana.vinvidyaadmin.adapters;
 
+import android.content.ClipboardManager;
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
+
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.vinuthana.vinvidyaadmin.R;
 
@@ -61,6 +65,44 @@ public class TimeTableAdapter extends RecyclerView.Adapter<TimeTableAdapter.MyVi
             tvTimeTableSubject = (TextView) itemView.findViewById(R.id.tvTimeTableSubject);
             tvTimeTableClass = (TextView) itemView.findViewById(R.id.tvTimeTableClass);
             tvTimeTablePeriod = (TextView) itemView.findViewById(R.id.tvTimeTablePeriod);
+
+            tvTimeTableSTime.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)timeTableContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvTimeTableSTime.getText());
+                    Toast.makeText(timeTableContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+            tvTimeTableSubject.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)timeTableContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvTimeTableSubject.getText());
+                    Toast.makeText(timeTableContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+            tvTimeTableClass.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)timeTableContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvTimeTableClass.getText());
+                    Toast.makeText(timeTableContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+            tvTimeTablePeriod.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)timeTableContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvTimeTablePeriod.getText());
+                    Toast.makeText(timeTableContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+
         }
     }
 }

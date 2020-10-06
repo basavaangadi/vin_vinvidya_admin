@@ -1,6 +1,7 @@
 package com.vinuthana.vinvidyaadmin.adapters;
 
 import android.app.Activity;
+import android.content.ClipboardManager;
 import android.content.Context;
 import android.graphics.Color;
 import android.support.v4.content.ContextCompat;
@@ -40,6 +41,8 @@ public class ExamDetailsRecylerAdapter extends RecyclerView.Adapter<ExamDetailsR
         LayoutInflater inflater = (LayoutInflater) exmschActivity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View view = inflater.inflate(R.layout.exam_status_details, parent,false);
         return new MyViewHolder(view);
+
+
     }
 
     @Override
@@ -309,6 +312,27 @@ public class ExamDetailsRecylerAdapter extends RecyclerView.Adapter<ExamDetailsR
             btnScheduleStatus=itemView.findViewById(R.id.btnScheduleStatus);
             btnSyllabusStatus=itemView.findViewById(R.id.btnSyllabusStatus);
             btnMarksStatus =itemView.findViewById(R.id.btnMarksStatus);
+
+
+            tvExamStatusSubject.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)exmschActivity.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvExamStatusSubject.getText());
+                    Toast.makeText(exmschActivity, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+            tvExamStatusClass.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)exmschActivity.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvExamStatusClass.getText());
+                    Toast.makeText(exmschActivity, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+
 
         }
     }

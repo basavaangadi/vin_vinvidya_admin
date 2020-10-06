@@ -1,5 +1,6 @@
 package com.vinuthana.vinvidyaadmin.adapters;
 
+import android.content.ClipboardManager;
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -77,6 +78,26 @@ public class StudentListCard extends RecyclerView.Adapter<StudentListCard.ViewHo
             tvStudName = (TextView) itemView.findViewById(R.id.tvStudentName);
             tvRollNo = (TextView) itemView.findViewById(R.id.tvRollNo);
             chkSelected = (CheckBox) itemView.findViewById(R.id.chkSelected);
+
+            tvStudName.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)ntcContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvStudName.getText());
+                    Toast.makeText(ntcContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+            tvRollNo.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)ntcContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvRollNo.getText());
+                    Toast.makeText(ntcContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+
         }
     }
 

@@ -1,5 +1,6 @@
 package com.vinuthana.vinvidyaadmin.adapters;
 
+import android.content.ClipboardManager;
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -116,6 +117,44 @@ public class PrntNtRecyclerViewAdapter extends RecyclerView.Adapter<PrntNtRecycl
             tvPrtNtNoteOnDate = (TextView) itemView.findViewById(R.id.tvPrtNtNoteOnDate);
             btnParentNoteEdit=itemView.findViewById(R.id.btnParentNoteEdit);
             btnParentNoteDelete=itemView.findViewById(R.id.btnParentNoteDelete);
+
+            tvPrtNtNoteTitle.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)prnNtContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvPrtNtNoteTitle.getText());
+                    Toast.makeText(prnNtContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+            tvPrtNtNote.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)prnNtContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvPrtNtNote.getText());
+                    Toast.makeText(prnNtContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+            tvPrtNtNoteSentDate.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)prnNtContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvPrtNtNoteSentDate.getText());
+                    Toast.makeText(prnNtContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+            tvPrtNtNoteOnDate.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)prnNtContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvPrtNtNoteOnDate.getText());
+                    Toast.makeText(prnNtContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+
         }
     }
     public interface OnNoticeViewClickListener{

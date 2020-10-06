@@ -1,6 +1,7 @@
 package com.vinuthana.vinvidyaadmin.adapters;
 
 import android.app.Activity;
+import android.content.ClipboardManager;
 import android.content.Context;
 import android.graphics.Color;
 import android.os.Build;
@@ -125,6 +126,43 @@ public class ReportRecyclerViewAdapterBelowKitKat extends RecyclerView.Adapter<R
 
             btnReportCardViewEditBelowKitKat = itemView.findViewById(R.id.btnReportCardViewEditBelowKitKat);
             btnReportCardViewDeleteBelowKitKat = itemView.findViewById(R.id.btnReportCardViewDeleteBelowKitKat);
+
+            tvReportCardViewSubjectBelowKitKat.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)reportContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvReportCardViewSubjectBelowKitKat.getText());
+                    Toast.makeText(reportContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+            tvReportCardViewPeriodBelowKitKat.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)reportContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvReportCardViewPeriodBelowKitKat.getText());
+                    Toast.makeText(reportContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+            tvReportCardViewClassBelowKitKat.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)reportContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvReportCardViewClassBelowKitKat.getText());
+                    Toast.makeText(reportContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+            tvReportCardViewReportBelowKitKat.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)reportContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvReportCardViewReportBelowKitKat.getText());
+                    Toast.makeText(reportContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
 
         }
     }

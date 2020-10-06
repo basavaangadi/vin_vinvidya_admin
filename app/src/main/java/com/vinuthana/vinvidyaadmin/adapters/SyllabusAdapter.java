@@ -2,6 +2,7 @@ package com.vinuthana.vinvidyaadmin.adapters;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.graphics.Color;
@@ -14,6 +15,8 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.vinuthana.vinvidyaadmin.R;
 
@@ -95,6 +98,27 @@ public class SyllabusAdapter extends RecyclerView.Adapter<SyllabusAdapter.MyView
             tvSylbsChapterName = (TextView) itemView.findViewById(R.id.tvSylbsChapterName);
             tvDescriptionMsg = (TextView) itemView.findViewById(R.id.tvDescriptionMsg);
             crdviewSyllabus =  itemView.findViewById(R.id.crdviewSyllabus);
+
+            tvSylbsChapterName.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)sylbsContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvSylbsChapterName.getText());
+                    Toast.makeText(sylbsContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+            tvDescriptionMsg.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)sylbsContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvDescriptionMsg.getText());
+                    Toast.makeText(sylbsContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+
+
             crdviewSyllabus.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

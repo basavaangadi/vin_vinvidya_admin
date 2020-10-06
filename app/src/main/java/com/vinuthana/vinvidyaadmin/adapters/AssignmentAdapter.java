@@ -1,6 +1,7 @@
 package com.vinuthana.vinvidyaadmin.adapters;
 
 import android.app.Activity;
+import android.content.ClipboardManager;
 import android.content.Context;
 import android.graphics.Color;
 import android.os.Build;
@@ -102,6 +103,7 @@ public class AssignmentAdapter extends RecyclerView.Adapter<AssignmentAdapter.My
         } catch (Exception e) {
             Toast.makeText(subContext, e.toString(), Toast.LENGTH_SHORT).show();
         }
+
     }
 
     public void setOnButtonClickListener(OnAssignmentClickListener onAssignmentClickListener){
@@ -126,6 +128,7 @@ public class AssignmentAdapter extends RecyclerView.Adapter<AssignmentAdapter.My
             btnDownload = (Button) itemView.findViewById(R.id.btnDownload);
             btnEdit = (Button) itemView.findViewById(R.id.btnEdit);
         }
+
     }
 
     public interface OnAssignmentClickListener{

@@ -1,11 +1,13 @@
 package com.vinuthana.vinvidyaadmin.adapters;
 
+import android.content.ClipboardManager;
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 import com.vinuthana.vinvidyaadmin.R;
@@ -56,6 +58,38 @@ public class ExmMarksRecycler extends RecyclerView.Adapter<ExmMarksRecycler.MyVi
             tvExmMarksSubject = (TextView) itemView.findViewById(R.id.tvExmMarksSubject);
             tvMaxExmMarks = (TextView) itemView.findViewById(R.id.tvMaxExmMarks);
             tvExmMarks = (TextView) itemView.findViewById(R.id.tvExmMarks);
+
+            tvExmMarksSubject.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)exmmrkcContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvExmMarksSubject.getText());
+                    Toast.makeText(exmmrkcContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+
+            tvMaxExmMarks.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)exmmrkcContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvMaxExmMarks.getText());
+                    Toast.makeText(exmmrkcContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+
+            tvExmMarks.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)exmmrkcContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvExmMarks.getText());
+                    Toast.makeText(exmmrkcContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+
+
         }
     }
 }

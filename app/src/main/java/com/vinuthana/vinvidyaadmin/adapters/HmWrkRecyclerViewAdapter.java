@@ -3,6 +3,7 @@ package com.vinuthana.vinvidyaadmin.adapters;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -178,6 +179,76 @@ public class HmWrkRecyclerViewAdapter extends RecyclerView.Adapter<HmWrkRecycler
             btnHmwrkEdit = itemView.findViewById(R.id.btnHmwrkEdit);
             btnHmwrkDelete = itemView.findViewById(R.id.btnHmwrkDelete);
             btnHmwrkFedback = itemView.findViewById(R.id.btnHmwrkFedback);
+
+            tvSubjectHmCrd.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)hmwrkContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvSubjectHmCrd.getText());
+                    Toast.makeText(hmwrkContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+            tvHomeWorkHmCrd.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)hmwrkContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvHomeWorkHmCrd.getText());
+                    Toast.makeText(hmwrkContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+
+            tvDateHmCrd.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)hmwrkContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvDateHmCrd.getText());
+                    Toast.makeText(hmwrkContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+            tvChptNameHmCrd.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)hmwrkContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvChptNameHmCrd.getText());
+                    Toast.makeText(hmwrkContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+            tvClassHmCrd.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)hmwrkContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvClassHmCrd.getText());
+                    Toast.makeText(hmwrkContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+            tvClassIdHmCrd.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)hmwrkContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvClassIdHmCrd.getText());
+                    Toast.makeText(hmwrkContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+
+            tvHmWrkIdHmCrd.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)hmwrkContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvHmWrkIdHmCrd.getText());
+                    Toast.makeText(hmwrkContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+
+
+
+
         }
     }
 

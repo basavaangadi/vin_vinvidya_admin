@@ -1,5 +1,6 @@
 package com.vinuthana.vinvidyaadmin.adapters;
 
+import android.content.ClipboardManager;
 import android.content.Context;
 import android.graphics.Color;
 import android.support.v7.widget.RecyclerView;
@@ -8,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.vinuthana.vinvidyaadmin.R;
 
@@ -156,6 +158,43 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
 
            txtObtainedMarks = (TextView) itemView.findViewById(R.id.txtObtainedMarks);
             txtResultStatus = (TextView) itemView.findViewById(R.id.txtResultStatus);
+
+            txtStudentName.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)context.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(txtStudentName.getText());
+                    Toast.makeText(context, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+            txtRollNo.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)context.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(txtRollNo.getText());
+                    Toast.makeText(context, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+            txtObtainedMarks.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)context.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(txtObtainedMarks.getText());
+                    Toast.makeText(context, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+            txtResultStatus.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)context.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(txtResultStatus.getText());
+                    Toast.makeText(context, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
 
         }
     }
