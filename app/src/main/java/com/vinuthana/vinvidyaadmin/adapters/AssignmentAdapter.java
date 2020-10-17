@@ -127,6 +127,48 @@ public class AssignmentAdapter extends RecyclerView.Adapter<AssignmentAdapter.My
             tViewDescription = (TextView) itemView.findViewById(R.id.editDescription);
             btnDownload = (Button) itemView.findViewById(R.id.btnDownload);
             btnEdit = (Button) itemView.findViewById(R.id.btnEdit);
+
+            tViewSubject.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)subContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tViewSubject.getText());
+                    Toast.makeText(subContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+
+            tViewTitle.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)subContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tViewTitle.getText());
+                    Toast.makeText(subContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+
+            tViewFilename.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)subContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tViewFilename.getText());
+                    Toast.makeText(subContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+
+            tViewDescription.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)subContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tViewDescription.getText());
+                    Toast.makeText(subContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+
+
         }
 
     }

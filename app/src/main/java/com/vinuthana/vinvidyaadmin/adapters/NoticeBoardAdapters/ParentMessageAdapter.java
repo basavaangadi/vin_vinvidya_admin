@@ -1,5 +1,6 @@
 package com.vinuthana.vinvidyaadmin.adapters.NoticeBoardAdapters;
 
+import android.content.ClipboardManager;
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -100,6 +101,68 @@ public class ParentMessageAdapter extends RecyclerView.Adapter<ParentMessageAdap
             tvParentMessageStudentName = (TextView) itemView.findViewById(R.id.tvParentMessageStudentName);
             tvParentMessageStaffRepliedDate = (TextView) itemView.findViewById(R.id.tvParentMessageStaffRepliedDate);
             btnParentNoteEdit = itemView.findViewById(R.id.btnParentNoteEdit);
+
+            tvParentMessageResponse.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)prnNtContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvParentMessageResponse.getText());
+                    Toast.makeText(prnNtContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+
+            tvParentMeassageSentOn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)prnNtContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvParentMeassageSentOn.getText());
+                    Toast.makeText(prnNtContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+
+            tvParentMessageMessage.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)prnNtContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvParentMessageMessage.getText());
+                    Toast.makeText(prnNtContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+
+            tvParentMessageClass.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)prnNtContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvParentMessageClass.getText());
+                    Toast.makeText(prnNtContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+
+            tvParentMessageStudentName.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)prnNtContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvParentMessageStudentName.getText());
+                    Toast.makeText(prnNtContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+
+            tvParentMessageStaffRepliedDate.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ClipboardManager cm = (ClipboardManager)prnNtContext.getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setText(tvParentMessageStaffRepliedDate.getText());
+                    Toast.makeText(prnNtContext, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+
+
 
         }
     }

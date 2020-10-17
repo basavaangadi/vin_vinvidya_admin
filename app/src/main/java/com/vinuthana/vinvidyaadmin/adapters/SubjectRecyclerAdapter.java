@@ -13,7 +13,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
-import androidx.recyclerview.widget.RecyclerView;
 
 import com.vinuthana.vinvidyaadmin.R;
 import com.vinuthana.vinvidyaadmin.activities.otheractivities.SubjectSyllabusActivity;
